@@ -10,9 +10,9 @@ describe('MyFormComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ MyFormComponent ],
-      // providers: [
-      //   { provide: FormBuilder, useClass: FormBuilder }
-      // ]
+      providers: [
+        { provide: FormBuilder, useClass: FormBuilder }
+      ]
     })
     .compileComponents();
   });

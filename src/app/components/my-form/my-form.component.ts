@@ -13,7 +13,7 @@ export class MyFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      name: [
+      username: [
         '',
         [
           Validators.required,
@@ -21,6 +21,19 @@ export class MyFormComponent implements OnInit {
           Validators.maxLength(10),
         ],
       ],
+      password: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(10),
+          Validators.pattern('[a-zA-Z0-9]{3,10}'),
+        ],
+      ],
     });
+  }
+
+  login() {
+    alert('Logged in as: ' + this.form.value.username);
   }
 }

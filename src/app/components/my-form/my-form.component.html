@@ -1,7 +1,9 @@
 <div fxLayout="row">
   <div fxFlex="" fxLayoutAlign="center">
     <form [formGroup]="form">
-      <input class type="text" formControlName="name" id="">
+      <input type="text" placeholder="username" formControlName="username" id="username">
+      <input type="password" placeholder="password" formControlName="password" id="password">
+      <button [disabled]="form?.invalid" (click)="login()">Login</button>
     </form>
   </div>
 </div>
